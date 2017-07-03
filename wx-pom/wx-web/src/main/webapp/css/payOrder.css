@@ -1,0 +1,31 @@
+﻿
+.flex-box .boxStyle {
+    position: relative;
+}
+.remainTime {
+	margin: 0 auto;
+    color: #999;
+    text-align: center;
+}
+ 
+.timeHeader {
+ 	margin-bottom: 1px;
+    background-color: #FFFEED;
+    padding: 8px;
+ }
+.payDetail {
+    color: #999;
+}
+#payAmount {
+    color: red;
+}
+.wx img {
+	height: 26px;
+    width: 26px;
+    border-radius: 13px;
+}
+.wx d {
+    position: relative;
+    left: 10px;
+    top: -5px;
+}

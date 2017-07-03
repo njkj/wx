@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta charset="UTF-8">
+<meta http-equiv='x-dns-prefetch-control' content='on'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv= "Cache-Control" content= "public" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+
+<title>添加新地址</title>
+
+<link type="text/css" href="../../../css/common.css" rel="stylesheet"/>
+<link type="text/css" href="../../../css/newAddr.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+});
+</script>
+
+<style type="text/css">
+
+</style>
+<body>
+
+<!--页头-->
+<div class="head">
+	<div class="back"><a href="javascript:history.back(1)"></a></div>
+	<div class="headTile">添加新地址</div>
+</div>
+
+<div style="height: 45px; visibility: hidden;"></div>
+
+<!--姓名-->
+<div class="section2 flex-box">
+	<div class="flex-input-label">姓名</div>
+	<div class="flex-input-write"><input type="text" maxlength="12" placeholder="" /></div>
+	<div class="flex-input-clear"><em></em></div>
+</div>
+
+<!--手机号码-->
+<div class="section2 flex-box">
+	<div class="flex-input-label">手机号码</div>
+	<div class="flex-input-write"><input type="text" maxlength="12" placeholder="" /></div>
+	<div class="flex-input-clear"><em></em></div>
+</div>
+
+<!--所在地区-->
+<div class="section2 flex-box">
+	<div class="flex-select-label">所在地区</div>
+	<div class="flex-select-button">请选择</div>
+	<div class="goto"><a href="javascript:void();"></a></div>
+</div>
+
+<!--所在街道-->
+<div class="section2 flex-box">
+	<div class="flex-select-label">所在街道</div>
+	<div class="flex-select-button"><span>请选择</span></div>
+	<div class="goto"><a href="javascript:void();"></a></div>
+</div>
+
+<!--详细地址-->
+<div class="section2">
+	<div class="flex-textarea"><textarea rows="4" cols="30" placeholder="详细地址"></textarea></div>
+</div>
+
+<!--设为默认地址-->
+<div class="section2 flex-box setDef">
+	<div class="flex-check-label">设为默认地址</div>
+	<div class="flex-checkbox boxStyle">
+		<input type="checkbox" value="1" id="checkbox1" name="" />  
+		<label for="checkbox1"></label>
+	</div>
+</div>
+
+<!--保存-->
+<div class="tailFixRow">
+	<a href="#"><p class="tailLabel">保存</p></a>
+</div>
+
+</body>
+</html>

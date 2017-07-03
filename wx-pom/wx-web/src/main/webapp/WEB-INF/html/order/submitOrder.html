@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta charset="UTF-8">
+<meta http-equiv='x-dns-prefetch-control' content='on'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv= "Cache-Control" content= "public" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+
+<title>提交订单</title>
+
+<link type="text/css" rel="stylesheet" href="../../../css/lib/jquery.mobile-1.4.5.min.css">
+<link type="text/css" href="../../../css/common.css" rel="stylesheet"/>
+<link type="text/css" href="../../../css/submitOrder.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../js/lib/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="../../../js/lib/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+});
+</script>
+
+
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<!--页头-->
+<div class="head">
+	<div class="back"><a href="javascript:history.back(1)"></a></div>
+	<div class="headTile">订单支付</div>
+</div>
+
+<div style="height: 45px; visibility: hidden;"></div>
+
+<div class="section">
+	<div class="buyGoods">
+		<div class="imgBlock">
+			<a href="#"><img src="../../../images/22.jpg" /></a>
+		</div>
+		<div class="nameBlock">
+			<div>一款非常漂亮的手表,一款非常漂亮的手表</div>
+		</div>
+		<div class="priceBlock">
+			<div>99999元/次</div>
+			<div class="numSet">
+				<div class="sub">-</div>
+				<div class="numInput">
+					<input data-role="none" value="1" name="quantity" /> 
+					<input data-role="none" type="hidden" id="maxnum" value="2" /> 
+					<input data-role="none" type="hidden" id="tfare" value="2" />
+				</div>
+				<div class="add">+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--支付方式-->
+<div class="section">
+	<div class="sectionTitle"><img src="../../../images/addr.png" />&nbsp;&nbsp;会员优惠</div>
+	<div id="discount">9折优惠</div>
+</div>
+
+<!--地址-->
+<div class="section">
+	<div class="sectionTitle"><img src="../../../images/addr.png" />&nbsp;&nbsp;地址</div>
+	<div >松松鹊： 99999999999</div>
+	<div class="goto"><a href="javascript:void();"></a></div>
+	<div>西去千里，江畔云山，山腰有亭，亭下有泉，泉边有松，松上待收</div>
+</div>
+
+<!--服务时间-->
+<div class="section">
+	<div class="sectionTitle"><img src="../../../images/time.png" />&nbsp;&nbsp;选择时间</div>
+	<div id="timeSet">2017-06-20，5点到7点</div>
+	<div class="goto"><a href="javascript:void();"></a></div>
+</div>
+
+<!--支付方式-->
+<div class="section">
+	<div class="sectionTitle"><img src="../../../images/addr.png" />&nbsp;&nbsp;支付方式</div>
+	<div id="payType">在线支付</div>
+	<div class="goto"><a href="javascript:void();"></a></div>
+</div>
+
+<!--备注-->
+<div class="section">
+	<div class="sectionTitle"></div>
+	<div id="remark"><textarea data-role="none" rows="4" cols="30" placeholder="请输入您的修改需求"></textarea></div>
+</div>
+
+
+<!--提交订单-->
+<div class="tailFixTab">
+	<div class="left"><a href="#"><p>合计：￥100.00</p></a></div>
+	<div class="right"><a href="#"><p>确认提交</p></a></div>
+</div>
+
+
+	<!--页脚-->
+<div id="foot"></div>
+	
+</body>
+</html>

@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta charset="UTF-8">
+<meta http-equiv='x-dns-prefetch-control' content='on'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv= "Cache-Control" content= "public" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+
+<title>个人资料</title>
+
+<link type="text/css" href="../../../css/common.css" rel="stylesheet"/>
+<link type="text/css" href="../../../css/datetime/mobiscroll.custom-2.5.0.min.css" rel="stylesheet" />
+<link type="text/css" href="../../../css/myInfo.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../js/lib/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="../../../js/lib/jquery.mobile-1.3.0.min.js" ></script>
+<script type="text/javascript" src="../../../js/lib/datetime/mobiscroll.js" ></script>
+
+<script type="text/javascript">
+$(function () {
+	
+	var newjavascript={
+		plugdatetime:function ($dateTxt,type) {
+				//var curr = new Date().getFullYear();
+				var opt = {}
+				opt.time = {preset : type};
+				opt.date = {preset : type};
+				opt.datetime = { 
+					preset : type, 
+					minDate: new Date(2010,1,01,00,00), 
+					maxDate: new Date(2020,12,31,24,59), 
+					stepMinute: 1  
+				};
+				
+				$dateTxt.val('').scroller('destroy').scroller($.extend(opt[type], { 
+					theme: "sense-ui", 
+					mode: "scroller", 
+					display: "modal", 
+					lang: "english",
+					monthText: "月",
+					dayText: "日",
+					yearText: "年",
+					hourText: "时",
+					minuteText: "分",
+					ampmText:"上午/下午",
+					setText: '确定',
+					cancelText: '取消',
+					dateFormat: 'yy-mm-dd'
+				})
+			);
+		}
+	}
+	newjavascript.plugdatetime($("#text"), "datetime")
+});
+</script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+});
+</script>
+
+<style type="text/css">
+</style>
+
+<body>
+
+<!--页头-->
+<div class="head">
+	<div class="back"><a href="javascript:history.back(1)"></a></div>
+	<div class="headTile">个人资料</div>
+</div>
+
+<div style="height: 45px; visibility: hidden;"></div>
+
+<div class="portrait">
+	<div class="floatImgDiv">
+		<img class="floatImg"  src="../../../images/qiqiu.png" />
+	</div>
+	<div class="myArea flex-box">
+		<div class="myHead">
+			<a class="" href="#">
+			    <img src="../../../images/portrait.jpg" />
+			</a>
+		</div>
+		<div class="myName">
+			<p><span class="vam">zhang_x_r</span> <span class="lv3"></span> </p>
+			<p class="mt15">我要买我要买</p>
+		</div>
+	</div>
+</div>
+
+<!--我的购物车-->
+<div class="section2 flex-box">
+	<div class="flex-select-label">我的购物车</div>
+	<div class="flex-select-button">查看我的购物车</div>
+	<div class="goto"><a href="javascript:void();"></a></div>
+</div>
+
+<!--我的订单-->
+<div class="section2 flex-box">
+	<div class="flex-select-label">我的订单</div>
+	<div class="flex-select-button">查看我的订单</div>
+	<div class="goto"><a href="javascript:void();"></a></div>
+</div>
+
+<!--我的地址-->
+<div class="section flex-box">
+	<div class="flex-input-label">我的地址</div>
+	<div class="flex-select-button">查看我的地址</div>
+	<div class="goto"><a href="javascript:void();"></a></div>
+</div>
+
+<!--姓名-->
+<div class="section2 flex-box">
+	<div class="flex-input-label">姓名</div>
+	<div class="flex-input-write"><input type="text" maxlength="12" placeholder="" /></div>
+	<div class="flex-input-clear"><em></em></div>
+</div>
+
+<!--手机-->
+<div class="section2 flex-box">
+	<div class="flex-input-label">手机</div>
+	<div class="flex-input-write"><input type="text" maxlength="12" placeholder="" /></div>
+	<div class="flex-input-clear"><em></em></div>
+</div>
+
+<!--姓别-->
+<div class="section2 flex-box">
+	<div class="flex-check-label">姓别</div>
+	<div class="flex-check">
+		<!--data-role="none"属性可以不让 jquery.mobile 补标签元素来改变表单布局-->
+		<label><input type="radio" class="radioEle" data-role="none" name="sex"><i>✓</i>男</label>
+		<label><input type="radio" class="radioEle" data-role="none" name="sex" checked><i>✓</i>女</label>
+	</div>
+</div>
+
+<!--生日-->
+<div class="section2 flex-box">
+	<div class="flex-check-label">生日</div>
+	<div class="flex-check"><input type="text" id="text" placeholder="请选择日期" /></div>
+</div>
+
+
+<!--保存-->
+<div class="tailFixRow">
+	<a href="#"><p class="tailLabel">保存</p></a>
+</div>
+
+</body>
+</html>

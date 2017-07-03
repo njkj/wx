@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta charset="UTF-8">
+<meta http-equiv='x-dns-prefetch-control' content='on'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv= "Cache-Control" content= "public" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+<title>购物商城</title>
+
+<link type="text/css" href="../../../css/common.css" rel="stylesheet"/>
+<link type="text/css" href="../../../css/shop.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../js/lib/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="../../../js/lib/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="../../../js/lib/slidScrollImg/jquery.touchSlider.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("#adv").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".adv_image").touchSlider({
+		width: 750,
+		flexible : true,
+		speed : 1000,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	
+	$(".adv_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".adv_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".adv_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 5000);
+	
+	$("#adv").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},5000);
+	});
+	
+	$(".adv_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+	});
+	
+	$(".adv_image li span").each(function(index){
+		var css = "url('" + $(this).attr("img") + "') center top no-repeat";
+		$(this).css("background", css);
+	});
+});
+</script>
+
+
+<style type="text/css">
+
+
+</style>
+
+</head>
+<body>
+
+<!--页头-->
+<div id="head"></div>
+
+<!--广告推荐-->
+<div id="adv">
+	<div class="flicking_con">
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+	</div>
+	<div class="adv_image">
+		<ul>
+			<li><span img="../../../images/img_main_1.jpg"></span></li>
+			<li><span img="../../../images/img_main_2.jpg"></span></li>
+			<li><span img="../../../images/img_main_3.jpg"></span></li>
+			<li><span img="../../../images/img_main_4.jpg"></span></li>
+			<li><span img="../../../images/img_main_5.jpg"></span></li>
+		</ul>
+		<a href="javascript:void();" id="btn_prev"></a>
+		<a href="javascript:void();" id="btn_next"></a>
+	</div>
+</div>
+
+<!--搜索-->
+<div id="search"></div>
+
+<!--商品展示-->
+<div id="goods">
+	<div class="goodsRow">
+		<div class="goodsCell">
+			<a><img src="http://image.suning.cn/uimg/cfs/project/149518415379005224.jpg" alt="" /></a>
+			<div class="goodName">智能电动摇篮<div>10元</div></div>
+		</div>
+		<div class="goodsCell">
+			<a><img src="http://image.suning.cn/uimg/cfs/project/149518415379005224.jpg" alt="" /></a>
+			<div class="goodName">智能电动摇篮<div>10元</div></div>
+		</div>
+	</div>
+	<div class="goodsRow">
+		<div class="goodsCell">
+			<a><img src="http://image.suning.cn/uimg/cfs/project/149518415379005224.jpg" alt="" /></a>
+			<div class="goodName">智能电动摇篮<div>10元</div></div>
+		</div>
+		<div class="goodsCell">
+			<a><img src="http://image.suning.cn/uimg/cfs/project/149518415379005224.jpg" alt="" /></a>
+			<div class="goodName">智能电动摇篮<div>10元</div></div>
+		</div>
+	</div>
+	<div class="goodsRow">
+		<div class="goodsCell">
+			<a><img src="http://image.suning.cn/uimg/cfs/project/149518415379005224.jpg" alt="" /></a>
+			<div class="goodName">智能电动摇篮<div>10元</div></div>
+		</div>
+		<div class="goodsCell">
+			<a><img src="http://image.suning.cn/uimg/cfs/project/149518415379005224.jpg" alt="" /></a>
+			<div class="goodName">智能电动摇篮<div>10元</div></div>
+		</div>
+	</div>
+</div>
+
+	<!--页脚-->
+<div id="foot" style="height:999px;"></div>
+	
+</body>
+</html>

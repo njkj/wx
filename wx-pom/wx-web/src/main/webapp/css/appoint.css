@@ -1,0 +1,25 @@
+﻿
+#baseInfo img {
+    width: 100%;
+}
+#baseInfo .title-price{
+    font-size: 22px;
+    height: 40px;
+    color: #333;
+	background-color: #AAAAFF;
+}
+#baseInfo .title {
+    position: absolute;
+    padding-top: 6px;
+    left: 2%;
+}
+#baseInfo .price {
+    position: absolute;
+    left: 80%;
+    padding-top: 6px;
+}
+
+#showService .serviceImg img {
+	width: 100%;
+}
+
