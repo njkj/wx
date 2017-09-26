@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.common.util.SignUtil;
+import com.nj.common.util.SignUtil;
 import com.nj.wx.dto.msg.resp.TextMessage;
 import com.nj.wx.web.util.MessageUtil;
 

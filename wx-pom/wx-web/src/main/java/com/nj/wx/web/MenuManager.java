@@ -3,11 +3,11 @@ package com.nj.wx.web;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.nj.wx.form.Button;
-import com.nj.wx.form.CommonButton;
-import com.nj.wx.form.ComplexButton;
-import com.nj.wx.form.Menu;
-import com.nj.wx.vo.AccessToken;
+import com.nj.service.wx.form.Button;
+import com.nj.service.wx.form.CommonButton;
+import com.nj.service.wx.form.ComplexButton;
+import com.nj.service.wx.form.Menu;
+import com.nj.service.wx.vo.AccessToken;
 import com.nj.wx.web.util.WeixinUtil;
 
 /**

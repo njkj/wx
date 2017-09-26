@@ -17,9 +17,9 @@ import org.slf4j.LoggerFactory;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.nj.wx.form.Menu;
-import com.nj.wx.vo.AccessToken;
-import com.nj.wx.vo.MyX509TrustManager;
+import com.nj.service.wx.form.Menu;
+import com.nj.service.wx.vo.AccessToken;
+import com.nj.service.wx.vo.MyX509TrustManager;
 
 /**
  * 公众平台通用接口工具类

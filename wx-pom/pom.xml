@@ -18,6 +18,7 @@
     <module>wx-dto</module>
     <module>wx-web</module>
     <module>wx-service</module>
+    <module>wx-dao</module>
   </modules>
   
 </project>

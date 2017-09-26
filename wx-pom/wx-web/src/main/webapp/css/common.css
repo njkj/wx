@@ -81,6 +81,17 @@ a {
     -webkit-transform: rotate(-235deg);
 }
 
+/* 全屏悬浮*/
+.wholeFloat {
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: white;
+}
+
 /* 头部固定悬浮行*/
 .head {
 	position: fixed;

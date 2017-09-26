@@ -15,14 +15,16 @@
 
 <title>预约服务</title>
 
-<link type="text/css" href="../../../css/common.css" rel="stylesheet"/>
-<link type="text/css" href="../../../css/appoint.css" rel="stylesheet"/>
+<link type="text/css" href="../css/common.css" rel="stylesheet"/>
+<link type="text/css" href="../css/appoint.css" rel="stylesheet"/>
 
-<script type="text/javascript" src="../../../js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery-1.7.1.min.js"></script>
 <script type="text/javascript">
 
 $(document).ready(function(){
-
+	$('#submitBtn').on('click', function(){
+		document.location.href='../appoint/submit';
+	});
 });
 </script>
 
@@ -38,7 +40,7 @@ $(document).ready(function(){
 <div id="head"></div>
 
 <div id="baseInfo">
-	<div><img src="../../../images/img_main_4.jpg" /></div>
+	<div><img src="../images/img_main_4.jpg" /></div>
 	<div class="title-price">
 		<div class="title">上门收纳服务</div>
 		<div class="price">100元</div>
@@ -59,13 +61,13 @@ $(document).ready(function(){
 
 <!--服务展示-->
 <div id="showService" class="section">
-	<div class="serviceImg"><img src="../../../images/img_main_3.jpg" /></div>
-	<div class="serviceImg"><img src="../../../images/11.jpg" /></div>
+	<div class="serviceImg"><img src="../images/img_main_3.jpg" /></div>
+	<div class="serviceImg"><img src="../images/11.jpg" /></div>
 </div>
 
 <!--预约购买-->
 <div class="tailFixRow">
-	<a href="#"><p class="tailLabel">立即预约</p></a>
+	<a id="submitBtn" href="#"><p class="tailLabel">立即预约</p></a>
 </div>
 
 

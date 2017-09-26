@@ -1,6 +1,6 @@
 package com.nj.wx.web.test;
 
-import com.nj.wx.vo.WeixinUserInfo;
+import com.nj.service.wx.vo.WeixinUserInfo;
 import com.nj.wx.web.util.CommonUtil;
 import com.nj.wx.web.util.WeixinUserUtil;
 
